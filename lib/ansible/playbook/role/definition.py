@@ -34,17 +34,11 @@ from ansible.playbook.conditional import Conditional
 from ansible.playbook.taggable import Taggable
 from ansible.template import Templar
 from ansible.utils.path import unfrackpath
+from ansible.utils.display import Display
 
 import logging
 log = logging.getLogger(__name__)
 
-try:
-    from __main__ import display
-except ImportError:
-    from ansible.utils.display import Display
-    display = Display()
-
->>>>>>> upstream/mazer_role_loader
 
 __all__ = ['RoleDefinition']
 
